@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Eletrônico</title>
+    <link rel="icon" href="arquivos/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="arquivos/logo.png" alt="Logo" class="logo">
+    </div>
+
+    <div id="loginScreen" class="container">
+        <h1>Login</h1>
+        <p id="demonstra">Utilize a senha 1234 para demonstração</p>
+        <input type="password" id="passwordInput" placeholder="Digite sua senha" />
+        <button id="loginBtn">Entrar</button>
+        <p id="loginError" class="error hidden">Senha incorreta. Tente novamente.</p>
+    </div>
+
+    <div id="atmScreen" class="container hidden">
+        <h1>Caixa Eletrônico</h1>
+        <select id="operation">
+            <option value="consultar">Consultar Saldo</option>
+            <option value="sacar">Sacar</option>
+            <option value="depositar">Depositar</option>
+        </select>
+        <input type="number" id="amountInput" placeholder="Valor" class="hidden"/>
+        <button id="performOperation">Realizar</button>
+        <p id="result" class="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
